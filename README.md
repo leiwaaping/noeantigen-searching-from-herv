@@ -75,6 +75,7 @@ cat 1.tmp |xargs >hdiffherv_region_depth.csv
 cat unitdepth.txt >>hdiffherv_region_depth.csv
 #rm 1.tmp unitdepth.txt
 ```
+2.side-wide statistics files in ***
 
 #add header to depth files，the unitdepth.txt only calculate the regions in S4-146herv.bed file.
 
