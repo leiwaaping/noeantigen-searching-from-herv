@@ -1,6 +1,7 @@
 # Neoantigen searching ##
 project 201905-201908
 
+## Research idea 1 ##
 ### calculating herv expression level ###
 ```
 #running hervQuant with docker ytding/hervQuant
@@ -91,5 +92,18 @@ $ bash command.sh
 3.side wides volcano plot【R script】 
 
 ### from site-wide base to peptides ###  【python3 script】
-here we have a human exciting peptides dataset from uniport (unit all possible human protein, covert them back to peptides chains and use sliding widows to split into 7-11 aa chains. then those peetides are supporsed to be the human normally expressed peptide). In this research we will exclude all those human-noramlly-expr site. The dataset info saved in ***S8-exclude_position.pkl***  
+Here we have a human exciting peptides dataset from uniport (unit all possible human protein, covert them back to peptides chains and use sliding widows to split into 7-11 aa chains. then those peptides are supporsed to be the human normally-expressed peptide). In this research we will exclude all those human-noramlly-expr site. The other peptides are more likely to be specific expressed peptides， saving in ***diffexpr_peptide_from_66hervs.csv***  
+Comparing to IEDB data base, no overlab data.
 
+
+## Research idea 2 ##
+### Get all the potential peptides from 3173 herv ###
+***hervquant_final_reference.fa*** is a 3173 herv database from previous research. Using sliding widows to split into 7-11 aa chains(both forward and reverse strand),get 153,579,605 uniq peptides,comparing them with IEDB cancer and non-cancer dataset(to excluded human-normally expr peptides), get 115 peptides appear in both IEDB cancer dataset and herv-peptide dataset, but not in non-cancer dataset.
+
+extract bed file for 115 peptides
+***115peptides_IEDB.bed***
+
+calculate depth in peptides region in ***R script IEDB-herv-peptides_analysis***
+
+### differential expression analysis based on 34 COAD PAIRED-SAMPLES ###
+1.
