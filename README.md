@@ -106,4 +106,6 @@ extract bed file for 115 peptides
 calculate depth in peptides region in ***R script IEDB-herv-peptides_analysis***
 
 ### differential expression analysis based on 34 COAD PAIRED-SAMPLES ###
-1.
+1.plot expression level in peptide region
+2.volcano plot. Gain 21 candidate peptide (log2FC >2)
+
